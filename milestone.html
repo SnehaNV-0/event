@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Milestone Parties</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+<style>
+  *{
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: medium;
+
+  }
+   input[type="radio"] {
+        display: none;
+      }
+
+      .slide {
+        position: absolute;
+        inset: 0;
+        opacity: 0;
+        transition: opacity 700ms ease-in-out;
+      }
+
+      input:checked + .slide {
+        opacity: 1;
+        z-index: 10;
+      }
+  
+</style>
+
+</head>
+<body class="bg-gray-50">
+
+  <nav class="bg-black text-white shadow-md" >
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <!-- Logo -->
+        <div class="flex-shrink-0">
+          <a href="#" class="text-2xl font-bold tracking-wider">WonderEvents</a>
+        </div>
+
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex space-x-6 items-center">
+          <a href="./index.html" class="hover:text-purple-200 transition">Home</a>
+          <a href="./aboutus.html" class="hover:text-purple-200 transition">About</a>
+          <a href="./contact.html" class="hover:text-purple-200 transition">Contact</a>
+          
+          
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <div class="md:hidden">
+          <button id="menu-btn" class="text-white focus:outline-none">
+            <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="md:hidden hidden bg-blue-500">
+      <a href="#" class="block px-4 py-2 hover:bg-blue-600">Home</a>
+      <a href="#" class="block px-4 py-2 hover:bg-blue-600">About</a>
+      <div class="block px-4 py-2">
+        <button id="services-btn" class="w-full text-left hover:bg-blue-600">Services</button>
+        <div id="services-dropdown" class="hidden bg-blue-600 mt-1 rounded-lg">
+          <a href="#" class="block px-4 py-2 hover:bg-blue-700">Web Development</a>
+          <a href="#" class="block px-4 py-2 hover:bg-blue-700">SEO Optimization</a>
+          <a href="#" class="block px-4 py-2 hover:bg-blue-700">Graphic Design</a>
+        </div>
+      </div>
+      <a href="#" class="block px-4 py-2 hover:bg-blue-600">Contact</a>
+    </div>
+  </nav>
+
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const servicesBtn = document.getElementById('services-btn');
+    const servicesDropdown = document.getElementById('services-dropdown');
+
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    servicesBtn.addEventListener('click', () => {
+      servicesDropdown.classList.toggle('hidden');
+    });
+  </script>
+    <header class="relative w-full h-96">
+      <img src="https://static.wixstatic.com/media/b18625_cb5468f6978540aab3fda90682c880da~mv2.jpeg/v1/fill/w_1600,h_358,al_c,q_85,enc_avif,quality_auto/b18625_cb5468f6978540aab3fda90682c880da~mv2.jpeg" alt="Header Image" class="w-full h-full object-cover">
+      <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+      </div>
+    </header>
+  
+    <section class="py-16 px-4 md:px-16 lg:px-32">
+      <div class="grid md:grid-cols-2 gap-8 items-center">
+        <img src="https://static.wixstatic.com/media/68c3d7_e0931961ccd24bfd86173546b1b24742~mv2.jpg/v1/fill/w_632,h_422,al_c,lg_1,q_80,enc_avif,quality_auto/68c3d7_e0931961ccd24bfd86173546b1b24742~mv2.jpg" alt="Event Image" class="w-full h-auto rounded shadow-lg">
+        <div>
+          <h2 class="text-3xl md:text-4xl font-semibold text-gray-800 mb-6 text-yellow-500">Milestone Parties</h2>
+          <p class="text-gray-600 mb-4 text-xl">Creating parties in Surrey, Home Counties, and London.</p>
+          <p class="text-gray-600 mb-4 text-xl">Our team specializes in planning and producing birthday parties that are timed to perfection and filled with style and flair.</p>
+          <p class="text-gray-600 mb-4 text-xl">Whether you're looking for a formal dinner, a cocktail party, a themed event, or simply an amazing party, we will take care of every detail to ensure that your party is a resounding success.</p>
+          <p class="text-gray-600 text-xl">Thanks to our extensive experience in luxury parties, we produce events for every occasion.From weddings, garden parties, luxury private celebrations, birthday parties and corporate events, we deliver it all with attention to detail and creativity.​ Perhaps it’s a 18th, 21st, 30th, 40th or even a 100th birthday party we will make it a party you and your guests will remember.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-16 px-4 md:px-16 lg:px-32 bg-white">
+      <h2 class="text-center text-3xl font-semibold text-gray-800 mb-8 text-yellow-500">Expert Party Planner</h2>
+      <div class="grid md:grid-cols-3 gap-8 text-center">
+        <div class="bg-gray-100 p-6 rounded shadow-lg">
+          <h3 class="text-xl font-bold text-gray-800 mb-4">Expert Party Planner</h3>
+          <p class="text-gray-600 text-xl">As an expert party planner, we will work with you to deliver a complete celebration experience. With vast knowledge of the entertainment industry and unmatched network of quality suppliers, we will flawlessly incorporate every detail to create your perfect event.</p>
+        </div>
+        <div class="bg-gray-100 p-6 rounded shadow-lg">
+          <h3 class="text-xl font-bold text-gray-800 mb-4">About Our Celebrations</h3>
+          <p class="text-gray-600 text-xl">At Wonder Events, we offer event services for various celebrations. With over 8 years of experience, we have organized a wide range of events, from garden parties to extravagant birthday parties and banquets. Our friendly organizers are experts in fulfilling your needs.</p>
+        </div>
+        <div class="bg-gray-100 p-6 rounded shadow-lg">
+          <h3 class="text-xl font-bold text-gray-800 mb-4">Experience the Difference</h3>
+          <p class="text-gray-600 text-xl">As a company, we are always aware that each themed event is unique, not just in terms of the celebration often being a "once in a lifetime event." For this reason, we take exceptional care in understanding the exact requirements of each function, so that it is perfect from conception to completion.</p>
+        </div>
+      </div>
+    </section>
+  
+    <section class="py-16 px-4 md:px-16 lg:px-32">
+      <div class="grid md:grid-cols-2 gap-8 items-center">
+        <img src="https://static.wixstatic.com/media/68c3d7_d02ab92e4d32493f8f6245bfeb47b1dd~mv2.png/v1/fill/w_676,h_699,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/Screenshot%202024-01-09%20at%2012_52_10.png" alt="Venue Image" class="w-full h-auto rounded shadow-lg">
+        <div>
+          <h2 class="text-3xl md:text-4xl font-semibold text-gray-800 mb-6 text-yellow-500">Venues</h2>
+          <p class="text-gray-600 mb-4 text-xl">We are fortunate to collaborate with some of the finest venues across Surrey, Berkshire, and London.Whether you're planning an intimate gathering or a grand celebration, we have access to a wide range of spaces that can cater to your specific needs and style.</p>
+          <p class="text-gray-600 mb-4 text-xl">While a venue coordinator can offer support in certain areas, if you desire a sophisticated celebration with customized assistance through every stage of the planning process, then an independent planner may be the better option for you.Our team ensures every aspect of your event is thoughtfully curated, from selecting the perfect venue to designing the finest details that bring your vision to life.</p>
+          <p class="text-gray-600 mb-4 text-xl">It's important to emphasize that we work closely with the in-house coordinator to ensure they have all the necessary information to manage the venue responsibilities while collaborating as a team to ensure a seamless event.</p>
+          <p class="text-gray-600 text-xl">If necessary, we are willing to dedicate time to thoroughly researching more options to find the perfect match.From historic estates to modern urban spaces, we explore every possibility to align with your preferences, ensuring your event stands out for its uniqueness and charm. We also provide detailed walkthroughs and customized venue layouts to help you visualize how your event will come to life.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-16 px-4 md:px-16 lg:px-32 bg-gray-100">
+      <div class="grid md:grid-cols-2 gap-8">
+        <div>
+          <h2 class="text-3xl md:text-4xl font-semibold text-gray-800 mb-6 text-yellow-500">Marquee & Stretch Tents</h2>
+          <p class="text-gray-600 mb-4 text-xl">Planning a garden party at home? We’ve organized numerous luxurious parties for our clients using their back gardens. Using a marquee as a party venue allows for a wide range of options, from extravagant and elaborate to sleek and sophisticated.</p>
+          <p class="text-gray-600 mb-4 text-xl">Our marquees are beautifully styled with draping and lighting and come equipped with heating, flooring, and more.</p>
+          <p class="text-gray-600 mb-4 text-xl">We offer a wide range of event structures that provide flexibility and ample space for guests. We specialize in creating luxurious marquees and multi-zoned structures:</p>
+          <ul class="list-disc pl-6 text-gray-600 mb-4 text-xl">
+            <li>Bars</li>
+            <li>Chill-out Lounges</li>
+            <li>Spacious open-plan areas for dining</li>
+            <li>DJ/Band Areas for dancing</li>
+            <li>Children Play Areas</li>
+            <li>House Extensions</li>
+          </ul>
+          <p class="text-gray-600 text-xl">We have built a great relationship with marquee and stretch tent companies who have extensive experience and knowledge of all types of temporary structures, ensuring the perfect design, style, shape, and size for your event or party.</p>
+        </div>
+        <div class="grid grid-cols-1 gap-4">
+          <!-- <img src="https://static.wixstatic.com/media/68c3d7_070990da67764e0b8c0232a97cbeff86~mv2.jpg/v1/fill/w_610,h_355,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/68c3d7_070990da67764e0b8c0232a97cbeff86~mv2.jpg" alt="Marquee Image 1" class="w-full h-50 rounded shadow-lg"> -->
+          <img src="https://static.wixstatic.com/media/68c3d7_cffbd600132f48bf9cefaf2a4c266035~mv2.jpeg/v1/fill/w_610,h_305,al_c,lg_1,q_80,enc_avif,quality_auto/68c3d7_cffbd600132f48bf9cefaf2a4c266035~mv2.jpeg" alt="Marquee Image 2" class="w-full h-auto rounded shadow-lg">
+          <div class="grid grid-cols-2 gap-4">
+            <img src="https://static.wixstatic.com/media/b18625_e207ae161644412f9e1fab3fed8326a2~mv2.jpeg/v1/crop/x_62,y_21,w_1143,h_854/fill/w_301,h_233,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/b18625_e207ae161644412f9e1fab3fed8326a2~mv2.jpeg" alt="Marquee Image 3" class="w-full h-auto rounded shadow-lg">
+          <img src="https://static.wixstatic.com/media/68c3d7_83a7ccdd7d3244dd84c376448078186b~mv2.png/v1/fill/w_293,h_233,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/68c3d7_83a7ccdd7d3244dd84c376448078186b~mv2.png" alt="Marquee Image 4" class="w-full h-auto rounded shadow-lg">
+          </div>
+        </div>
+      </div>
+    </section>
+  
+    <section class="py-16 px-4 md:px-16 lg:px-32">
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="grid grid-cols-1 gap-4">
+          <img src="https://static.wixstatic.com/media/68c3d7_5efb7620a13a469ab0f70b7040bdb238~mv2.png/v1/fill/w_610,h_440,al_c,lg_1,q_85,enc_avif,quality_auto/68c3d7_5efb7620a13a469ab0f70b7040bdb238~mv2.png" alt="Catering Image 1" class="w-full h-auto rounded shadow-lg">
+          <img src="https://static.wixstatic.com/media/68c3d7_8c03f599a14d477fad5efbdf8e1fd231~mv2.png/v1/fill/w_609,h_439,al_c,lg_1,q_85,enc_avif,quality_auto/68c3d7_8c03f599a14d477fad5efbdf8e1fd231~mv2.png" alt="Catering Image 2" class="w-full h-120 rounded shadow-lg">
+          <!-- <img src="https://static.wixstatic.com/media/68c3d7_cf5d7af6eac444d2a5ff4a3117019916~mv2.png/v1/fill/w_556,h_342,al_c,lg_1,q_85,enc_avif,quality_auto/68c3d7_cf5d7af6eac444d2a5ff4a3117019916~mv2.png" alt="Catering Image 3" class="w-full h-120 rounded shadow-lg"> -->
+          
+        </div>
+        <div>
+          <h2 class="text-3xl md:text-4xl font-semibold text-gray-800 mb-6 text-yellow-500">Catering</h2>
+          <p class="text-gray-600 mb-4 text-xl">Why Choose Wonder Events for Your Dining Experience?</p>
+          <p class="text-gray-600 mb-4 text-xl">At Wonder Events, we believe exceptional dining goes beyond great food—it’s about creating memorable moments that bring people together. Here’s why we stand out as the best choice for your catering needs:</p>
+          <ul class="list-disc pl-6 text-gray-600 mb-4 text-2xl">
+            <li><strong class="text-yellow-500 font-semibold">Tailored to Your Event:</strong> Every event is unique, and we pride ourselves on crafting bespoke menus and experiences that perfectly align with your vision, whether it’s an intimate gathering or a large corporate celebration.</li>
+            <li><strong class="text-yellow-500 font-semibold">Creative Culinary Excellence:</strong> We combine innovation with passion, offering diverse menus that showcase the finest, freshest, and most seasonal ingredients. From elegant fine dining to vibrant buffets, our food is as visually stunning as it is delicious.</li>
+            <li><strong class="text-yellow-500 font-semibold">Flawless Execution:</strong> With years of experience in event planning and catering, we ensure every detail runs seamlessly. Our team is professional, attentive, and dedicated to making your event stress-free and unforgettable.</li>
+            <li><strong class="text-yellow-500 font-semibold">Fun and Flavorful:</strong> We know how to have fun with food! From the hob to the job, we bring energy and creativity to every event, transforming meals into celebrations.</li>
+            <li><strong class="text-yellow-500 font-semibold">Versatility You Can Trust:</strong> Whether you’re planning a business lunch, festive Christmas party, milestone birthday, or elegant wedding, Wonder Events has the expertise to cater for every occasion and setting.</li>
+          </ul>
+          <p class="text-gray-600 mb-4 text-xl text-yellow-500 font-semibold">Choose from a range of catering styles:</p>
+          <ul class="list-disc pl-6 text-gray-600 text-2xl">
+            <li>Fine Dining</li>
+            <li>Bowl Food</li>
+            <li>Buffets</li>
+            <li>Canapes</li>
+            <li>Dinner Parties</li>
+            <li>Street Food</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Mixologist and Bar Hire Section -->
+<section class="bg-gray-50 py-16 px-4 md:px-16">
+  <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-8 items-center">
+
+    <!-- Left Content -->
+    <div>
+      <h2 class="text-4xl font-bold text-gray-800 mb-4 text-yellow-500">
+        Mixologist and Bar Hire
+      </h2>
+      <p class="text-lg text-gray-600 mb-6 text-xl">
+        THAT RAISES YOUR EXPECTATION
+      </p>
+      <p class="text-gray-700 mb-4 text-xl">
+        At <strong>Wonder Events</strong>, we understand the power of a perfectly curated beverage to transform any gathering into an unforgettable celebration. Here's why we are the ultimate choice for bar management and drink services for all ages:
+      </p>
+
+      <!-- Key Points -->
+      <div class="space-y-4">
+        <div>
+          <h3 class="font-semibold text-gray-800 text-yellow-500">Expertly Curated Wine Selection:</h3>
+          <p class="text-gray-600 text-xl">
+            Selecting the right wine is essential to a complete dining experience. Our team collaborates with sommeliers and trusted suppliers to provide a handpicked wine list that pairs perfectly with your menu, ensuring every sip delights.
+          </p>
+        </div>
+        <div>
+          <h3 class="font-semibold text-gray-800 text-yellow-500">Creative Cocktails with Flair:</h3>
+          <p class="text-gray-600 text-xl">
+            Take your event to the next level with our talented mixologists, who combine artistry with entertainment. From classic mixers to signature drinks, every cocktail becomes part of the entertainment.
+          </p>
+        </div>
+        <div>
+          <h3 class="font-semibold text-gray-800 text-yellow-500">Inclusive Beverage Options:</h3>
+          <p class="text-gray-600 text-xl">
+            We cater to all ages and preferences, offering a wide range of options, including mocktails, soft drinks, craft beers, spirits, and non-alcoholic alternatives. Everyone can join in the fun, no matter their tastes.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Images -->
+    <div class="grid grid-cols-2 gap-4">
+      <img
+        src="https://static.wixstatic.com/media/68c3d7_833158b8cbb04e2db1ac22551cfa2ab4~mv2.jpeg/v1/crop/x_40,y_0,w_935,h_667/fill/w_736,h_419,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/AdobeStock_319030362_Preview%20copy.jpeg"
+        alt="Mixologist crafting cocktail"
+        class="w-full h-48 object-cover rounded shadow-lg"
+      />
+      <img
+        src="https://static.wixstatic.com/media/68c3d7_c6fdfdf31787443fb82a78db2eb82aee~mv2.jpg/v1/fill/w_697,h_454,al_c,lg_1,q_80,enc_avif,quality_auto/68c3d7_c6fdfdf31787443fb82a78db2eb82aee~mv2.jpg"
+        alt="Elegant Bar Setup"
+        class="w-full h-48 object-cover rounded shadow-lg"
+      />
+      <img
+        src="https://static.wixstatic.com/media/68c3d7_a7f1bd928e554e6faa12ff11c23d31ce~mv2.jpeg/v1/fill/w_697,h_403,al_c,lg_1,q_80,enc_avif,quality_auto/68c3d7_a7f1bd928e554e6faa12ff11c23d31ce~mv2.jpeg"
+        alt="Event drinks display"
+        class="col-span-2 w-full h-64 object-cover rounded shadow-lg"
+      />
+    </div>
+  </div>
+</section>
+
+<section class="bg-gray-100 flex items-center justify-center">
+  <!-- Slider Container -->
+  <div class="relative w-full h-96 overflow-hidden rounded-none">
+    <!-- Slide 1 -->
+    <input type="radio" name="slider" id="slide1" checked />
+    <div class="slide">
+      <img
+        src="https://static.wixstatic.com/media/b18625_1f9c7002beea4b3aa957b39b2a02acf1~mv2.jpg/v1/fill/w_1224,h_817,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/b18625_1f9c7002beea4b3aa957b39b2a02acf1~mv2.jpg"
+        alt="Slide 1"
+        class="w-full h-full object-cover"
+      />
+      <!-- Arrows -->
+      <label
+        for="slide3"
+        class="absolute left-5 top-1/2 transform -translate-y-1/2 text-4xl text-white cursor-pointer"
+        >&lt;</label
+      >
+      <label
+        for="slide2"
+        class="absolute right-5 top-1/2 transform -translate-y-1/2 text-4xl text-white cursor-pointer"
+        >&gt;</label
+      >
+    </div>
+
+    <!-- Slide 2 -->
+    <input type="radio" name="slider" id="slide2" />
+    <div class="slide">
+      <img
+        src="https://static.wixstatic.com/media/68c3d7_18ea64514aa04b168bff3dc3ee4ad3c9~mv2.jpg/v1/fill/w_1293,h_863,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/68c3d7_18ea64514aa04b168bff3dc3ee4ad3c9~mv2.jpg"
+        alt="Slide 2"
+        class="w-full h-full object-cover"
+      />
+      <!-- Arrows -->
+      <label
+        for="slide1"
+        class="absolute left-5 top-1/2 transform -translate-y-1/2 text-4xl text-white cursor-pointer"
+        >&lt;</label
+      >
+      <label
+        for="slide3"
+        class="absolute right-5 top-1/2 transform -translate-y-1/2 text-4xl text-white cursor-pointer"
+        >&gt;</label
+      >
+    </div>
+
+    <!-- Slide 3 -->
+    <input type="radio" name="slider" id="slide3" />
+    <div class="slide">
+      <img
+        src="https://static.wixstatic.com/media/b18625_2575ac39223d45a5a38043de3ad858c9~mv2.jpeg/v1/fill/w_932,h_863,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/b18625_2575ac39223d45a5a38043de3ad858c9~mv2.jpeg"
+        alt="Slide 3"
+        class="w-full h-full object-cover"
+      />
+      <!-- Arrows -->
+      <label
+        for="slide2"
+        class="absolute left-5 top-1/2 transform -translate-y-1/2 text-4xl text-white cursor-pointer"
+        >&lt;</label
+      >
+      <label
+        for="slide1"
+        class="absolute right-5 top-1/2 transform -translate-y-1/2 text-4xl text-white cursor-pointer"
+        >&gt;</label
+      >
+    </div>
+
+   
+  </div>
+</section>
+
+<!-- getintouch -->
+<div class="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8 bg-lime-100">
+  <div class="sm:mx-auto sm:w-full sm:max-w-sm">
+    <h2 class="mt-10 text-center text-2xl/9 font-bold tracking-tight text-gray-900">Get in Touch</h2>
+  </div>
+
+  <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
+    <form class="space-y-6" action="#" method="POST">
+      <div>
+          <label for="email" class="block text-sm/6 font-medium text-gray-900">Full Name</label>
+          <div class="mt-2">
+            <input type="text" name="email" id="email" autocomplete="email" required class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
+          </div>
+        </div>
+      <div>
+        <label for="email" class="block text-sm/6 font-medium text-gray-900">Email address</label>
+        <div class="mt-2">
+          <input type="email" name="email" id="email" autocomplete="email" required class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
+        </div>
+      </div>
+
+      <div>
+          <label for="email" class="block text-sm/6 font-medium text-gray-900">Phone Number</label>
+          <div class="mt-2">
+            <input type="text" name="email" id="email" autocomplete="email" required class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
+          </div>
+        </div>
+        <div>
+          <label for="email" class="block text-sm/6 font-medium text-gray-900">Address</label>
+          <div class="mt-2">
+            <input type="text" name="email" id="email" autocomplete="email" required class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
+          </div>
+        </div>
+       
+      <center><a href="./submit.html">Send a message</a></center> 
+     
+
+      </div>
+
+    </form>
+
+  </div>
+</div>
+  
+<footer class="mt-0 p-5 bg-black" id="footer">
+  <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+    <!-- About Us Section -->
+    <div class="text-white">
+      <h5 class="text-lg font-bold mb-4">ABOUT US</h5>
+      <p class="text-justify text-white-800">
+        Welcome to Urban Nest – where style meets comfort! Our passion is turning houses into homes with beautifully curated decor that reflects your unique personality. Whether you're looking for modern minimalism or timeless elegance, we offer a variety of options to elevate every corner of your space. Explore our collection and discover how we can help you create the perfect ambiance, one detail at a time. Let's make your home a masterpiece!
+      </p>
+    </div>
+
+    <!-- Delivery Locations Section -->
+    <div class="text-center " >
+      <h5 class="text-lg font-bold mb-4 text-white ">Delivery Across world</h5>
+      <ul class="space-y-1 text-white">
+        <li>India</li>
+        <li>UK</li>
+        <li>Australia</li>
+        <li>America</li>
+        <li>Finland</li>
+        <li>Germany</li>
+        <li>Ireland</li>
+        <li>Italy</li>
+      </ul>
+    </div>
+
+    <!-- Shop by Room Section -->
+    <div class="text-center">
+      <h5 class="text-lg font-bold mb-4 text-white">Services</h5>
+      <ul class="space-y-1 ">
+        <li><a href="./children.html" class="text-white ">Children party</a></li>
+        <li><a href="./baby.html" class="text-white ">Baby shower</a></li>
+        <li><a href="./casestudy.html" class="text-white ">Case study</a></li>
+        <li><a href="./milestone.html" class="text-white ">Milestone party</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact & Social Section -->
+    <div>
+      <h5 class="text-lg font-bold mb-4 text-white">Connect With Us</h5>
+      <div class="flex space-x-4 text-xl text-white mb-6">
+        <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook hover:text-blue-600"></i></a>
+        <a href="https://x.com/?lang=en"><i class="fa-brands fa-twitter hover:text-blue-400"></i></a>
+        <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram hover:text-pink-500"></i></a>
+      </div>
+      <h5 class="text-lg font-bold mb-4 text-white ">Need Any Help? Contact Us</h5>
+      <p class="text-white "><i class="fa-solid fa-envelope mr-2"></i>Urbannest@gmail.com</p>
+      <p class="text-white "><i class="fa-solid fa-phone mr-2"></i>8765430092</p>
+      <p class="text-white "><i class="fa-solid fa-location-dot mr-2"></i> 12 Michael Lane, Guildford, Surrey<br>
+        GU2 9LB</p>
+    </div>
+  </div>
+  <hr class="my-4 border-gray-300">
+  <p class="text-center text-sm text-white ">©2024 Wonderevents | All Rights Reserved</p>
+</footer>
+    
+</body>
+</html>

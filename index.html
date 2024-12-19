@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>party</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+<style>
+  *{
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: medium;
+
+  }
+   input[type="radio"] {
+        display: none;
+      }
+
+      .slide {
+        position: absolute;
+        inset: 0;
+        opacity: 0;
+        transition: opacity 700ms ease-in-out;
+      }
+
+      input:checked + .slide {
+        opacity: 1;
+        z-index: 10;
+      }
+  
+</style>
+
+</head>
+<body class="bg-gray-50">
+
+  <nav class="bg-black text-white shadow-md" >
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <!-- Logo -->
+        <div class="flex-shrink-0">
+          <a href="#" class="text-2xl font-bold tracking-wider">WonderEvents</a>
+        </div>
+
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex space-x-6 items-center">
+          <a href="./index.html" class="hover:text-purple-200 transition">Home</a>
+          <a href="./aboutus.html" class="hover:text-purple-200 transition">About</a>
+          <a href="./contact.html" class="hover:text-purple-200 transition">Contact</a>
+          
+          
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <div class="md:hidden">
+          <button id="menu-btn" class="text-white focus:outline-none">
+            <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="md:hidden hidden bg-blue-500">
+      <a href="#" class="block px-4 py-2 hover:bg-blue-600">Home</a>
+      <a href="#" class="block px-4 py-2 hover:bg-blue-600">About</a>
+      <div class="block px-4 py-2">
+        <button id="services-btn" class="w-full text-left hover:bg-blue-600">Services</button>
+        <div id="services-dropdown" class="hidden bg-blue-600 mt-1 rounded-lg">
+          <a href="#" class="block px-4 py-2 hover:bg-blue-700">Web Development</a>
+          <a href="#" class="block px-4 py-2 hover:bg-blue-700">SEO Optimization</a>
+          <a href="#" class="block px-4 py-2 hover:bg-blue-700">Graphic Design</a>
+        </div>
+      </div>
+      <a href="#" class="block px-4 py-2 hover:bg-blue-600">Contact</a>
+    </div>
+  </nav>
+
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const servicesBtn = document.getElementById('services-btn');
+    const servicesDropdown = document.getElementById('services-dropdown');
+
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    servicesBtn.addEventListener('click', () => {
+      servicesDropdown.classList.toggle('hidden');
+    });
+  </script>
+    <header class="relative w-full h-96">
+      <img src="https://plus.unsplash.com/premium_photo-1713720664635-ac557cf7465d?q=80&w=2049&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Header Image" class="w-full h-full object-cover">
+      <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+        <h1 class="text-white text-6xl">WONDER EVENTS</h1>
+      </div>
+    </header>
+  
+    <section class="py-16 px-4 md:px-16 lg:px-32">
+      <div class="grid md:grid-cols-2 gap-8 items-center">
+        <img src="https://static.wixstatic.com/media/68c3d7_e0931961ccd24bfd86173546b1b24742~mv2.jpg/v1/fill/w_632,h_422,al_c,lg_1,q_80,enc_avif,quality_auto/68c3d7_e0931961ccd24bfd86173546b1b24742~mv2.jpg" alt="Event Image" class="w-full h-auto rounded shadow-lg">
+        <div>
+          <a href="./milestone.html"><h2 class="text-3xl md:text-4xl font-semibold text-gray-800 mb-6 text-yellow-500">Milestone Parties</h2></a>
+          <p class="text-gray-600 mb-4 text-xl">Creating parties in Surrey, Home Countries, and London.</p>
+          <p class="text-gray-600 mb-4 text-xl">Our team specializes in planning and producing birthday parties that are timed to perfection and filled with style and flair.</p>
+          <p class="text-gray-600 mb-4 text-xl">Whether you're looking for a formal dinner, a cocktail party, a themed event, or simply an amazing party, we will take care of every detail to ensure that your party is a resounding success.</p>
+          <p class="text-gray-600 text-xl">Thanks to our extensive experience in luxury parties, we produce events for every occasion.From weddings, garden parties, luxury private celebrations, birthday parties and corporate events, we deliver it all with attention to detail and creativity.​ Perhaps it’s a 18th, 21st, 30th, 40th or even a 100th birthday party we will make it a party you and your guests will remember.</p>
+        </div>
+      </div>
+    </section>
+
+
+  
+    <section class="py-16 px-4 md:px-16 lg:px-32">
+      <div class="grid md:grid-cols-2 gap-8 items-center">
+        <img src="https://plus.unsplash.com/premium_photo-1677654188365-7b466569f123?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Venue Image" class="w-full h-auto rounded shadow-lg">
+        <div>
+          <a href="./baby.html"><h2 class="text-3xl md:text-4xl font-semibold text-gray-800 mb-6 text-yellow-500">Baby Shower</h2></a>
+          <p class="text-gray-600 mb-4 text-xl">A baby shower is a beautiful celebration of life and love, marking the arrival of a new member into the family. Our baby shower event management service specializes in creating memorable experiences filled with joy, warmth, and elegance. We understand the importance of this special day and work tirelessly to make it stress-free and unforgettable for expecting parents and their loved ones.</p>
+          <p class="text-gray-600 mb-4 text-xl">From the initial planning stages to the final moments of the celebration, we handle every detail with precision and care. Our services include theme selection, venue decoration, catering, entertainment, and personalized keepsakes for guests. Whether you envision a whimsical fairy tale theme, a modern and chic design, or a cozy and intimate gathering, we bring your vision to life with creativity and finesse.</p>
+          <p class="text-gray-600 mb-4 text-xl">It's important to emphasize that we work closely with the in-house coordinator to ensure they have all the necessary information to manage the venue responsibilities while collaborating as a team to ensure a seamless event.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-16 px-4 md:px-16 lg:px-32 bg-gray-100">
+      <div class="grid md:grid-cols-2 gap-8">
+        <div>
+          <a href="./casestudy.html"><h2 class="text-3xl md:text-4xl font-semibold text-gray-800 mb-6 text-yellow-500">Case Study Parties</h2></a>
+          <p class="text-gray-600 mb-4 text-xl">
+            Case study parties are collaborative events where participants, often in teams, analyze and solve real-world business problems or scenarios. These events encourage critical thinking, teamwork, and problem-solving skills. Participants are typically given a case study, which could involve challenges in areas like marketing, finance, operations, or strategy. They work together to come up with innovative solutions, analyze data, and present their findings. Case study parties promote knowledge sharing, networking, and practical learning. They offer a dynamic environment where individuals can showcase their analytical abilities and gain insights from peers, making them valuable for professional and personal growth.</p>
+          <p class="text-gray-600 mb-4 text-xl">Case study parties provide an engaging and interactive platform for participants to apply their theoretical knowledge to practical situations. These events are often organized by educational institutions, businesses, or professional networks, fostering a competitive yet supportive atmosphere. They help participants improve their communication, presentation, and leadership skills while refining their problem-solving abilities. By working on real-life scenarios, attendees gain valuable insights into industry challenges and trends. Additionally, case study parties offer an opportunity for networking and collaboration with like-minded individuals, enhancing personal and professional development. Ultimately, they contribute to building confidence and expertise in handling complex business issues.</p>
+          
+
+
+        </div>
+        <div class="grid grid-cols-1 gap-4">
+          <!-- <img src="https://static.wixstatic.com/media/68c3d7_070990da67764e0b8c0232a97cbeff86~mv2.jpg/v1/fill/w_610,h_355,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/68c3d7_070990da67764e0b8c0232a97cbeff86~mv2.jpg" alt="Marquee Image 1" class="w-full h-50 rounded shadow-lg"> -->
+          <img src="https://plus.unsplash.com/premium_photo-1667514668700-9be133c3dc20?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Marquee Image 2" class="w-full h-auto rounded shadow-lg">
+          <div class="grid grid-cols-2 gap-4">
+            <img src="https://plus.unsplash.com/premium_photo-1664474653221-8412b8dfca3e?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Marquee Image 3" class="w-full h-auto rounded shadow-lg">
+          <img src="https://plus.unsplash.com/premium_photo-1667514634205-fda5453a91ff?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Marquee Image 4" class="w-full h-auto rounded shadow-lg">
+          </div>
+        </div>
+      </div>
+    </section>
+  
+  
+    
+    <!-- Mixologist and Bar Hire Section -->
+<section class="bg-gray-50 py-16 px-4 md:px-16">
+  <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-8 items-center">
+
+    <!-- Left Content -->
+    <div>
+      <a href="./children.html"><h2 class="text-4xl font-bold text-gray-800 mb-4 text-yellow-500">
+        Children Parties
+      </h2></a>
+      <p class="text-gray-700 mb-4 text-xl">
+        Children’s parties are fun-filled celebrations designed to entertain and delight young guests. These events are tailored to suit the interests and energy levels of kids, often featuring games, themed decorations, activities, and entertainment. Popular themes include superheroes, princesses, animals, or favorite cartoons. Party organizers typically provide a variety of age-appropriate games such as scavenger hunts, piñatas, and arts and crafts. Food is often fun and colorful, with cupcakes, snacks, and themed cakes. With music, dancing, and party favors, children’s parties are designed to create memorable experiences for kids and a stress-free, joyful atmosphere for parents.
+      </p>
+
+      <!-- Key Points -->
+      
+    </div>
+
+    <!-- Right Images -->
+    <div class="grid grid-cols-2 gap-4">
+      <img
+        src="https://plus.unsplash.com/premium_photo-1691752881339-d78da354ee7e?q=80&w=1814&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        alt="Mixologist crafting cocktail"
+        class="w-full h-48 object-cover rounded shadow-lg"
+      />
+      <img
+        src="https://plus.unsplash.com/premium_photo-1693251971122-739131d8c585?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        alt="Elegant Bar Setup"
+        class="w-full h-48 object-cover rounded shadow-lg"
+      />
+      <img
+        src="https://plus.unsplash.com/premium_photo-1693251972000-b219a228bc8e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        alt="Event drinks display"
+        class="col-span-2 w-full h-64 object-cover rounded shadow-lg"
+      />
+    </div>
+  </div>
+</section>
+
+<section class="bg-gray-100 flex items-center justify-center">
+  <!-- Slider Container -->
+  <div class="relative w-full h-96 overflow-hidden rounded-none">
+    <!-- Slide 1 -->
+    <input type="radio" name="slider" id="slide1" checked />
+    <div class="slide">
+      <img
+        src="https://static.wixstatic.com/media/b18625_1f9c7002beea4b3aa957b39b2a02acf1~mv2.jpg/v1/fill/w_1224,h_817,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/b18625_1f9c7002beea4b3aa957b39b2a02acf1~mv2.jpg"
+        alt="Slide 1"
+        class="w-full h-full object-cover"
+      />
+      <!-- Arrows -->
+      <label
+        for="slide3"
+        class="absolute left-5 top-1/2 transform -translate-y-1/2 text-4xl text-white cursor-pointer"
+        >&lt;</label
+      >
+      <label
+        for="slide2"
+        class="absolute right-5 top-1/2 transform -translate-y-1/2 text-4xl text-white cursor-pointer"
+        >&gt;</label
+      >
+    </div>
+
+    <!-- Slide 2 -->
+    <input type="radio" name="slider" id="slide2" />
+    <div class="slide">
+      <img
+        src="https://static.wixstatic.com/media/68c3d7_18ea64514aa04b168bff3dc3ee4ad3c9~mv2.jpg/v1/fill/w_1293,h_863,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/68c3d7_18ea64514aa04b168bff3dc3ee4ad3c9~mv2.jpg"
+        alt="Slide 2"
+        class="w-full h-full object-cover"
+      />
+      <!-- Arrows -->
+      <label
+        for="slide1"
+        class="absolute left-5 top-1/2 transform -translate-y-1/2 text-4xl text-white cursor-pointer"
+        >&lt;</label
+      >
+      <label
+        for="slide3"
+        class="absolute right-5 top-1/2 transform -translate-y-1/2 text-4xl text-white cursor-pointer"
+        >&gt;</label
+      >
+    </div>
+
+    <!-- Slide 3 -->
+    <input type="radio" name="slider" id="slide3" />
+    <div class="slide">
+      <img
+        src="https://static.wixstatic.com/media/b18625_2575ac39223d45a5a38043de3ad858c9~mv2.jpeg/v1/fill/w_932,h_863,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/b18625_2575ac39223d45a5a38043de3ad858c9~mv2.jpeg"
+        alt="Slide 3"
+        class="w-full h-full object-cover"
+      />
+      <!-- Arrows -->
+      <label
+        for="slide2"
+        class="absolute left-5 top-1/2 transform -translate-y-1/2 text-4xl text-white cursor-pointer"
+        >&lt;</label
+      >
+      <label
+        for="slide1"
+        class="absolute right-5 top-1/2 transform -translate-y-1/2 text-4xl text-white cursor-pointer"
+        >&gt;</label
+      >
+    </div>
+
+   
+  </div>
+</section>
+
+<!-- getintouch -->
+<div class="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8 bg-lime-100">
+  <div class="sm:mx-auto sm:w-full sm:max-w-sm">
+    <h2 class="mt-10 text-center text-2xl/9 font-bold tracking-tight text-gray-900">Get in Touch</h2>
+  </div>
+
+  <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
+    <form class="space-y-6" action="#" method="POST">
+      <div>
+          <label for="email" class="block text-sm/6 font-medium text-gray-900">Full Name</label>
+          <div class="mt-2">
+            <input type="text" name="email" id="email" autocomplete="email" required class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
+          </div>
+        </div>
+      <div>
+        <label for="email" class="block text-sm/6 font-medium text-gray-900">Email address</label>
+        <div class="mt-2">
+          <input type="email" name="email" id="email" autocomplete="email" required class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
+        </div>
+      </div>
+
+      <div>
+          <label for="email" class="block text-sm/6 font-medium text-gray-900">Phone Number</label>
+          <div class="mt-2">
+            <input type="text" name="email" id="email" autocomplete="email" required class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
+          </div>
+        </div>
+        <div>
+          <label for="email" class="block text-sm/6 font-medium text-gray-900">Address</label>
+          <div class="mt-2">
+            <input type="text" name="email" id="email" autocomplete="email" required class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
+          </div>
+        </div>
+       
+      <center><a href="./submit.html">Send a message</a></center> 
+     
+
+      </div>
+
+    </form>
+
+  </div>
+</div>
+
+<footer class="mt-0 p-5 bg-black" id="footer">
+  <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+    <!-- About Us Section -->
+    <div class="text-white">
+      <h5 class="text-lg font-bold mb-4">ABOUT US</h5>
+      <p class="text-justify text-white-800">
+        Welcome to Urban Nest – where style meets comfort! Our passion is turning houses into homes with beautifully curated decor that reflects your unique personality. Whether you're looking for modern minimalism or timeless elegance, we offer a variety of options to elevate every corner of your space. Explore our collection and discover how we can help you create the perfect ambiance, one detail at a time. Let's make your home a masterpiece!
+      </p>
+    </div>
+
+    <!-- Delivery Locations Section -->
+    <div class="text-center " >
+      <h5 class="text-lg font-bold mb-4 text-white ">Delivery Across world</h5>
+      <ul class="space-y-1 text-white">
+        <li>India</li>
+        <li>UK</li>
+        <li>Australia</li>
+        <li>America</li>
+        <li>Finland</li>
+        <li>Germany</li>
+        <li>Ireland</li>
+        <li>Italy</li>
+      </ul>
+    </div>
+
+    <!-- Shop by Room Section -->
+    <div class="text-center">
+      <h5 class="text-lg font-bold mb-4 text-white">Services</h5>
+      <ul class="space-y-1 ">
+        <li><a href="./children.html" class="text-white ">Children party</a></li>
+        <li><a href="./baby.html" class="text-white ">Baby shower</a></li>
+        <li><a href="./casestudy.html" class="text-white ">Case study</a></li>
+        <li><a href="./milestone.html" class="text-white ">Milestone party</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact & Social Section -->
+    <div>
+      <h5 class="text-lg font-bold mb-4 text-white">Connect With Us</h5>
+      <div class="flex space-x-4 text-xl text-white mb-6">
+        <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook hover:text-blue-600"></i></a>
+        <a href="https://x.com/?lang=en"><i class="fa-brands fa-twitter hover:text-blue-400"></i></a>
+        <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram hover:text-pink-500"></i></a>
+      </div>
+      <h5 class="text-lg font-bold mb-4 text-white ">Need Any Help? Contact Us</h5>
+      <p class="text-white "><i class="fa-solid fa-envelope mr-2"></i>Urbannest@gmail.com</p>
+      <p class="text-white "><i class="fa-solid fa-phone mr-2"></i>8765430092</p>
+      <p class="text-white "><i class="fa-solid fa-location-dot mr-2"></i> 12 Michael Lane, Guildford, Surrey<br>
+        GU2 9LB</p>
+    </div>
+  </div>
+  <hr class="my-4 border-gray-300">
+  <p class="text-center text-sm text-white ">©2024 Wonderevents | All Rights Reserved</p>
+</footer>
+  
+    
+</body>
+</html>

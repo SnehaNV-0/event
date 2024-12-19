@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+</head>
+<body class="bg-gray-100">
+    <nav class="bg-black text-white shadow-md" >
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="flex justify-between items-center h-16">
+            <!-- Logo -->
+            <div class="flex-shrink-0">
+              <a href="#" class="text-2xl font-bold tracking-wider">WonderEvents</a>
+            </div>
+    
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex space-x-6 items-center">
+              <a href="./index.html" class="hover:text-purple-200 transition">Home</a>
+              <a href="./aboutus.html" class="hover:text-purple-200 transition">About</a>
+              <a href="./contact.html" class="hover:text-purple-200 transition">Contact</a>
+              
+              
+            </div>
+    
+            <!-- Mobile Menu Button -->
+            <div class="md:hidden">
+              <button id="menu-btn" class="text-white focus:outline-none">
+                <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+    
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden hidden bg-blue-500">
+          <a href="#" class="block px-4 py-2 hover:bg-blue-600">Home</a>
+          <a href="#" class="block px-4 py-2 hover:bg-blue-600">About</a>
+          <div class="block px-4 py-2">
+            <button id="services-btn" class="w-full text-left hover:bg-blue-600">Services</button>
+            <div id="services-dropdown" class="hidden bg-blue-600 mt-1 rounded-lg">
+              <a href="#" class="block px-4 py-2 hover:bg-blue-700">Web Development</a>
+              <a href="#" class="block px-4 py-2 hover:bg-blue-700">SEO Optimization</a>
+              <a href="#" class="block px-4 py-2 hover:bg-blue-700">Graphic Design</a>
+            </div>
+          </div>
+          <a href="#" class="block px-4 py-2 hover:bg-blue-600">Contact</a>
+        </div>
+      </nav>
+    
+      <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const servicesBtn = document.getElementById('services-btn');
+        const servicesDropdown = document.getElementById('services-dropdown');
+    
+        menuBtn.addEventListener('click', () => {
+          mobileMenu.classList.toggle('hidden');
+        });
+    
+        servicesBtn.addEventListener('click', () => {
+          servicesDropdown.classList.toggle('hidden');
+        });
+      </script>
+
+    <!-- Contact Us Banner -->
+    <section class="relative h-64 bg-cover bg-center" style="background-image: url('https://static.wixstatic.com/media/b18625_200578223a624ba8ac968f6794889caa~mv2.jpeg/v1/fill/w_1899,h_550,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/b18625_200578223a624ba8ac968f6794889caa~mv2.jpeg');">
+        <div class="absolute inset-0 bg-black opacity-50"></div>
+        <div class="relative flex justify-center items-center h-full">
+            <h1 class="text-white text-5xl font-semibold">Contact Us</h1>
+        </div>
+    </section>
+
+    <!-- Contact Page Layout -->
+    <div class="flex flex-col md:flex-row h-auto md:h-screen">
+        <!-- Left Contact Information -->
+        <div class="bg-[#b3915b] text-white flex flex-col items-center justify-center py-12 px-8 w-full md:w-1/3">
+            <!-- Icon -->
+            <div class="mb-6">
+                <!-- <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75-4.365-9.75-9.75-9.75z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.75v5.25l3 3" />
+                </svg> -->
+                <!-- <box-icon name='phone-call' type='solid' color='#ffffff' style="width: 90px; height: 90px;"></box-icon> -->
+                <box-icon name='phone-call' type='solid' animation='tada' color='#ffffff' style="width: 90px; height: 90px;"></box-icon>           </div>
+            <!-- Title -->
+            <h2 class="text-3xl text-center font-medium mb-4 leading-relaxed">
+                Contact us to turn your dream into a reality.
+            </h2><br><br>
+            <!-- Address -->
+            <p class="text-center mb-6 text-xl leading-relaxed">
+                12 Michael Lane, Guildford, Surrey<br>
+                GU2 9LB
+            </p><br><br>
+            <!-- Contact Details -->
+            <p class="text-xl text-center mb-6">
+                Mobile: <span class="font-semibold">07507 376836</span><br>
+                Email: 
+                <a href="mailto:paula@wonderevents.co.uk" class="underline">
+                    wonderevents@gmail.com
+                </a><br>
+            </p>
+            <!-- Payment Acceptance -->
+            <p class="text-xl text-center mb-4">
+                We accept all major debit or credit cards:
+            </p>
+            <br><br>
+            <!-- Payment Logos -->
+            <div class="flex justify-center space-x-4">
+                <img src="https://static.wixstatic.com/media/b18625_d9ee40137add4983a6f0677e95820ffb~mv2.png/v1/fill/w_359,h_61,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/pngkit_american-express-logo-png_8931646.png" alt="Visa" class="h-8 w-auto">
+                
+            </div>
+        </div>
+
+        <!-- Right Section (Form) -->
+        <div class="bg-white flex flex-col justify-center items-center w-full md:w-2/3 p-8">
+            <h2 class="text-3xl font-semibold mb-6 text-center">
+                Please fill out this form and we will get back to you shortly
+            </h2>
+            <form class="w-full max-w-2xl space-y-6">
+                <!-- Name Fields -->
+                <div class="flex space-x-4">
+                    <input type="text" placeholder="Enter Your Name *" class="border border-gray-300 p-3 w-full">
+                    <input type="text" placeholder="Enter Your Last Name" class="border border-gray-300 p-3 w-full">
+                </div>
+                <!-- Phone and Email -->
+                <div class="flex space-x-4">
+                    <input type="tel" placeholder="Enter Your Phone *" class="border border-gray-300 p-3 w-full">
+                    <input type="email" placeholder="Enter Your Email *" class="border border-gray-300 p-3 w-full">
+                </div>
+                <!-- Message Field -->
+                <textarea placeholder="Type Your Message Here *" class="border border-gray-300 p-3 w-full h-32"></textarea>
+                <!-- Submit Button -->
+                <div class="text-center">
+                    <a class="text-decoration-none" href="./submit.html">Submit</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <footer class="mt-0 p-5 bg-black" id="footer">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <!-- About Us Section -->
+          <div class="text-white">
+            <h5 class="text-lg font-bold mb-4">ABOUT US</h5>
+            <p class="text-justify text-white-800">
+              Welcome to Urban Nest – where style meets comfort! Our passion is turning houses into homes with beautifully curated decor that reflects your unique personality. Whether you're looking for modern minimalism or timeless elegance, we offer a variety of options to elevate every corner of your space. Explore our collection and discover how we can help you create the perfect ambiance, one detail at a time. Let's make your home a masterpiece!
+            </p>
+          </div>
+      
+          <!-- Delivery Locations Section -->
+          <div class="text-center " >
+            <h5 class="text-lg font-bold mb-4 text-white ">Delivery Across world</h5>
+            <ul class="space-y-1 text-white">
+                <li>India</li>
+                <li>UK</li>
+                <li>Australia</li>
+                <li>America</li>
+                <li>Finland</li>
+                <li>Germany</li>
+                <li>Ireland</li>
+                <li>Italy</li>
+            </ul>
+          </div>
+      
+          <!-- Shop by Room Section -->
+          <div class="text-center">
+            <h5 class="text-lg font-bold mb-4 text-white">Services</h5>
+            <ul class="space-y-1 ">
+              <li><a href="./children.html" class="text-white ">Children party</a></li>
+              <li><a href="./baby.html" class="text-white ">Baby shower</a></li>
+              <li><a href="./casestudy.html" class="text-white ">Case study</a></li>
+              <li><a href="./milestone.html" class="text-white ">Milestone party</a></li>
+            </ul>
+          </div>
+      
+          <!-- Contact & Social Section -->
+          <div>
+            <h5 class="text-lg font-bold mb-4 text-white">Connect With Us</h5>
+            <div class="flex space-x-4 text-xl text-white mb-6">
+              <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook hover:text-blue-600"></i></a>
+              <a href="https://x.com/?lang=en"><i class="fa-brands fa-twitter hover:text-blue-400"></i></a>
+              <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram hover:text-pink-500"></i></a>
+            </div>
+            <h5 class="text-lg font-bold mb-4 text-white ">Need Any Help? Contact Us</h5>
+            <p class="text-white "><i class="fa-solid fa-envelope mr-2"></i>Urbannest@gmail.com</p>
+            <p class="text-white "><i class="fa-solid fa-phone mr-2"></i>8765430092</p>
+            <p class="text-white "><i class="fa-solid fa-location-dot mr-2"></i> 12 Michael Lane, Guildford, Surrey<br>
+              GU2 9LB</p>
+          </div>
+        </div>
+        <hr class="my-4 border-gray-300">
+        <p class="text-center text-sm text-white ">©2024 Wonderevents | All Rights Reserved</p>
+      </footer>
+</body>
+</html>
+
+
+
